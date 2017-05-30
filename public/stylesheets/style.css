@@ -1,0 +1,181 @@
+.record-item{
+  line-height: 60px;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 32px;
+}
+
+.win {
+  background-color: #42f45f;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 48px;
+  width: 90px;
+  line-height: 60px;
+}
+
+.red {
+    color: #f4425f;
+}
+
+.lose {
+  background-color: #f45642;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 48px;
+  width: 90px;
+  line-height: 60px;
+}
+
+.location{
+    margin-bottom: 10px;
+}
+
+.tie {
+  background-color: #ffdd54;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 48px;
+  width: 90px;
+  line-height: 60px;
+}
+
+.tabactive{
+    background-color: #eee;
+    border-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-right: 1px;
+}
+
+.tabs{
+    background-color: #999;
+    border-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-right: 1px;
+}
+
+.tabs:hover{
+  background-color: #999;
+}
+
+.white{
+  background-color: #fff;
+  height : 100px;
+}
+
+.content{
+  height : 400px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.record-row {
+  background-color: #393939;
+}
+
+.upcoming{
+  background-color: #393939;
+}
+
+.back-inverse {
+  background-color: #c4c2be;
+  line-height: 45px;
+}
+
+.games{
+  background-color: #59706f;
+}
+
+.recent{
+  text-align: center;
+  background-color: #59706f;
+}
+
+.intro-section{
+  padding-top: 50px;
+}
+
+body {
+  background-color: #dbe0e0;
+}
+
+table{
+  background-color: #dbe0e0;
+  border-color: #dbe0e0;
+  border: #dbe0e0;
+}
+
+.logo{
+  height: 35px;
+  width: 35px;
+  padding-right: 5px;
+}
+
+.team_logo{
+  text-align: center;
+  padding-bottom: 10px;
+  color: #555;
+}
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin #inputEmail, .form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=username], .form-signin input[type=password], .form-signin input[type=text], .form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+    /*background-color: #4d90fe; */
+    background-color: rgb(104, 145, 162);
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.btn.btn-signin:hover, .btn.btn-signin:active, .btn.btn-signin:focus {
+    background-color: rgb(12, 97, 33);
+}

@@ -1,0 +1,50 @@
+#logo{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.logo{
+  height: 34px;
+  width: 35px;
+  padding-right: 0px;
+}
+
+.nav2 {
+  background-color: #c4c2be;
+  height: 78px;
+  color: #333;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 78px;
+}
+
+.break {
+  height: 80px;
+}
+
+body{
+    background-color: #dbe0e0;
+}
+
+.pad{
+  padding-top: 16px;
+}
+
+.pad2{
+  padding-left: 13px;
+}
+
+.name{
+  font-weight: 100;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+}
+li{
+  font-size: 15px;
+}

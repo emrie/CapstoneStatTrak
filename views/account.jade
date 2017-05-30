@@ -1,0 +1,67 @@
+doctype html
+
+html
+  head
+    meta(charset = 'utf-8')
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Stat Trak Account
+    link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+    link(href='/stylesheets/scrolling-nav.css', rel='stylesheet')
+    link(href='/stylesheets/style.css' rel = 'stylesheet')
+    script(src='/scripts/script.js')
+
+  body(id="page-top" datadata-spy="scroll" data-target=".navbar-fixed-top")
+    if error
+      alert(error)
+    nav(class="navbar navbar-toggleable-md navbar-light back-inverse")
+      div(class="container")
+        button(class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+          span(class = "navbar-toggler-icon")
+        img(class="logo" src='/favicon.ico')
+        a(class="navbar-brand" href="/mainpage") StatTrak
+        div(class="collapse navbar-collapse" id="navbarNav")
+          ul(class="navbar-nav")
+            li(class="nav-item")
+              a(class="nav-link" href="StatTrak") Record Game
+            li(class="nav-item")
+              a(class="nav-link" href="stats") Stats
+            li(class="nav-item")
+              a(class="nav-link" href="account") Account
+    section(id="intro" class="intro-section")
+    div(class="container")
+      .w3-bar.w3-black
+        button.btn.tabactive(onclick="openTab('changePassword');") Change Password
+        if type == "c"
+          button.btn.tabs(onclick="openTab('schedule');") Schedule a Game
+        if type == "c"
+          button.btn.tabs(onclick="openTab('manage');") Manage Team
+        button.btn.tabs(onclick="openTab('logout');") Logout
+      div(class="container content")
+        #changePassword.tab
+          form.form-signin(action='/changePassword', method='post')
+            .col-md-5
+              input#inputEmail.form-control(type='password', name='oldpassword', placeholder='Current password', required='', autofocus='')
+              input#inputPassword.form-control(type='password', name='newpassword', placeholder='New password', required='')
+              input#inputPassword.form-control(type='password', name='confirm_newpassword', placeholder='Confirm new password', required='')
+              p.red #{error}
+              button.btn.btn-lg.btn-primary.btn-block.btn-signin(type='submit', value='submit') Change Password
+
+        #schedule.tab(style='display:none')
+          form.form-signin(action='/scheduleGame', method='post')
+            .col-md-5
+              select.form-control(class="location" name='location', required='', autofocus='')
+                option(value='home', selected='') Home
+                option(value='away') Away
+              input#inputPassword.form-control(type='username', name='teamName', placeholder='Team Name', required='')
+              input#inputPassword.form-control(type='username', name='date', placeholder='Date', required='')
+              button.btn.btn-lg.btn-primary.btn-block.btn-signin(type='submit', value='submit') Add to Schedule
+
+        #manage.tab(style='display:none')
+            if players
+              each player in players
+                p #{player.number} : #{player.name.last}, #{player.name.first}
+
+        #logout.tab(style='display:none')
+          form(action='/logout', method='post')
+            button.btn.btn-info(type='submit', value='submit') Log Out

@@ -1,0 +1,27 @@
+html
+  // All the files that are required
+  link(rel='stylesheet', href='stylesheets/login.css')
+  link(rel='stylesheet', href='stylesheets/bootstrap.css')
+  title StatTrak Login
+  body
+    //
+      you can substitue the span of reauth email for a input with the email and
+      include the remember me checkbox
+    .container
+      .card.card-container
+        // <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" />
+        img#profile-img.profile-img-card(src='favicon.ico')
+        p#profile-name.profile-name-card
+        form.form-signin(action='/login', method='post')
+          span#reauth-email.reauth-email
+          input#inputEmail.form-control(type='username', name='user', placeholder='Username', required='', autofocus='')
+          input#inputPassword.form-control(type='password', name='password', placeholder='Password', required='')
+          p.red #{error}
+          button.btn.btn-lg.btn-primary.btn-block.btn-signin(type='submit', value='submit') Sign in
+        // /form
+        a.forgot-password(href='/registration')
+          | Create an account
+        a.forgot-password(href='/password_reset')
+          | Forgot your password?
+      // /card-container
+    // /container

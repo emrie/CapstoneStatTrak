@@ -1,0 +1,33 @@
+html
+  // All the files that are required
+  link(rel='stylesheet', href='/stylesheets/login.css')
+  link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+  title StatTrak Registration
+  body
+    //
+      you can substitue the span of reauth email for a input with the email and
+      include the remember me checkbox
+    .container
+      .card.card-container
+        img#profile-img.profile-img-card(src='favicon.ico')
+        p#profile-name.profile-name-card
+        form.form-signin(action='/registration', method='post')
+          span#reauth-email.reauth-email
+          input#inputEmail.form-control(type='username', name='firstname', placeholder='First Name', required='', autofocus='')
+          input#inputEmail.form-control(type='username', name='lastname', placeholder='Last Name', required='')
+          input#inputEmail.form-control(type='username', name='username', placeholder='Username', required='')
+          input#inputEmail.form-control(type='username', name='email', placeholder='Email', required='')
+          input#inputPassword.form-control(type='password', name='password', placeholder='Password', required='')
+          input#inputPassword.form-control(type='password', name='password_confirm', placeholder='Confirm Password', required='')
+          input#inputEmail.form-control(type='username', name='teamCode', placeholder='Team Code', required='')
+          input#inputEmail.form-control(type='username', name='number', placeholder='Player Number')
+          input#inputEmail.form-control(type='username', name='teamName', placeholder='Team Name')
+          input(type='Checkbox', name='type', value='c')
+          = " Coach"
+          p.red #{error}
+          button.btn.btn-lg.btn-primary.btn-block.btn-signin(type='submit', value='submit') Create Account
+        // /form
+        a.forgot-password(href='/login')
+          | Already have an account?
+      // /card-container
+    // /container

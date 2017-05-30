@@ -1,0 +1,66 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Stat Trak Game Stats
+    link(href='stylesheets/bootstrap.css', rel='stylesheet')
+    link(href='stylesheets/scrolling-nav.css', rel='stylesheet')
+    link(href='stylesheets/style.css', rel='stylesheet')
+  body#page-top(datadata-spy='scroll', data-target='.navbar-fixed-top')
+    nav.navbar.navbar-toggleable-md.navbar-light.back-inverse
+      .container
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        img.logo(src='/favicon.ico')
+        a.navbar-brand(href='/mainpage') StatTrak
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav
+            li.nav-item
+              a.nav-link(href='StatTrak') Record Game
+            li.nav-item
+              a.nav-link(href='stats') Stats
+            li.nav-item
+              a.nav-link(href='account') Account
+    section#intro.intro-section
+    .container
+      h1(class="team_logo") #{team1} vs #{team2}
+      .row
+        .col-md-5.col-sm-12
+          table#table1.table.table-inverse
+            thead
+              tbody
+                tr.record-row
+                  th.record-item Name
+                  th.record-item Number
+                  th.record-item 1Pt
+                  th.record-item 2Pts
+                  th.record-item 3Pts
+                each player in homePlayers
+                  tr(class="record-row")
+                    td(class="record-item")
+                      h3 #{player.name.last}, #{player.name.first}
+                    td(class="record-item") #{player.number}
+                    td(class="record-item") #{player.pt1}
+                    td(class="record-item") #{player.pt2}
+                    td(class="record-item") #{player.pt3}
+        .col-md-2
+        .col-md-5.col-sm-12
+          table#table2.table.table-inverse
+            thead
+              tbody
+                tr.record-row
+                  th.record-item Name
+                  th.record-item Number
+                  th.record-item 1Pt
+                  th.record-item 2Pts
+                  th.record-item 3Pts
+                each player in awayPlayers
+                  tr(class="record-row")
+                    td(class="record-item")
+                      h3 #{player.name.last}, #{player.name.first}
+                    td(class="record-item") #{player.number}
+                    td(class="record-item") #{player.pt1}
+                    td(class="record-item") #{player.pt2}
+                    td(class="record-item") #{player.pt3}

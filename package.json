@@ -1,0 +1,22 @@
+{
+  "name": "stattrak",
+  "version": "1.0.0",
+  "description": "sports stat trecker",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "jade": "^1.11.0",
+    "mongoose": "^4.9.9",
+    "nodemon": "^1.11.0",
+    "serve-favicon": "^2.4.2",
+    "socket.io": "^2.0.1"
+  }
+}

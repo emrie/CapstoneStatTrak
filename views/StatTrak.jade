@@ -1,0 +1,74 @@
+doctype html
+html
+  head
+    title StatTrak
+    link(rel='stylesheet', href='/StatTrak/bootstrap.css')
+    link(rel='stylesheet', href='/StatTrak/style.css')
+    script(src='/StatTrak/loadPlayers.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='http://code.jquery.com/jquery-1.11.1.js')
+  body
+    nav.navbar.navbar-default.navbar-fixed-top.nav2
+      .container
+        #navbar.navbar-collapse.collapse
+          ul.nav.navbar-nav.pad2
+            li
+              img.logo(src='/favicon.ico')
+            li.pad.name
+              a(href='/mainpage' style="color:#000;") StatTrak
+            li.pad
+              a(href='/StatTrak') Record Game
+            li.pad
+              a(href='/stats') Stats
+            li.pad
+              a(href='/account') Account
+        // /.nav-collapse
+    .break
+    button.btn.btn-info.right(onclick='save()') Save Game
+    #one
+      .container
+        h1#team1
+        .jumbotron
+          h1#score Score: 0
+      .container
+        #players.row
+          .col-md-3
+            h2 Player Name
+          .col-md-3
+            h2 Number
+          .col-md-2
+            h2 Fouls
+          .col-md-4
+            h2 Points
+          hr.col-md-12
+      hr
+      .container#load1
+        .row
+          .col-md-10.btn-group
+            input#teamCode.form-control(value='#{homeTeam}')
+          .col-md-2.btn-group
+            button.btn.btn-info(onclick='loadPlayers()') Load Players
+    #two(hidden='')
+      .container
+        h1#team2
+        .jumbotron
+          h1#score2 Score: 0
+      .container
+        #players2.row
+          .col-md-3
+            h2 Player Name
+          .col-md-3
+            h2 Number
+          .col-md-2
+            h2 Fouls
+          .col-md-4
+            h2 Points
+          hr.col-md-12
+      hr
+      .container#load2
+        .row
+          .col-md-10.btn-group
+            input#teamCode2.form-control(placeholder='Enter Team Code')
+          .col-md-2.btn-group
+            button.btn.btn-info(onclick='loadPlayers2()') Load Players
+    button.btn.btn-info(onclick='myFunction()') switch
